@@ -1,0 +1,74 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+{% block styles%}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css?family=Akronim|Bellefair|Joti+One" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="container" style="background-color:gainsboro; padding:20px; margin-top:0px; padding-top:40px; padding-bottom:400px;">
+        <div class="row" style="text-align:center; font-size:30px;">
+            <span style="font-size:40px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PiTcH-ZoNe</span>
+        </div>
+
+          <div class="collapse navbar-collapse" id="navbarNav" style="padding: 5rem;">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a href="{{url_for('main.interview')}}" style="font-family: 'Joti One', cursive; font-size:12px;">
+                        
+                    Inteview Pitches
+                </a>
+               
+              </li>
+              <li class="nav-item">
+                <a href="{{url_for('main.pick_up_line')}}" style="font-family: 'Joti One', cursive; font-size:12px;">
+                       
+                    Pick Up Lines
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url_for('main.promotion')}}" style="font-family: 'Joti One', cursive; font-size:12px;">
+                        
+                    Promotion Pitches
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url_for('main.product')}}" style="font-family: 'Joti One', cursive; font-size:12px;">
+                        
+                    Product Pitches
+                </a>
+              </li>
+            </ul>
+          </div>
+          <br>
+          <br>
+            
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+            <div class="panel style="style="border: 3px solid #f2f2f2; padding:20px; margin-top:10px;">
+                <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size:20px;">Welcome to Pitches-Zone. Feel free to create new pitches,comment and vote.</p>
+                
+                <div style="text-align:center;">
+                    <a href="{{url_for('main.new_pitch')}}">
+                        <br>
+                        <span >Add a new Pitch</span>
+                    </a>
+
+                </div>
+            
+            </div>
+            
+        </div>
+    </hr>
+        <div class="all-pitches">
+            <span style="color:gainsboro;">All pitches are displayed below</span>
+                <hr> 
+                {{macro.displayPitches(pitches)}}
+            
+
+        </div>
+
+    </div>
+
+
+{% endblock %}
