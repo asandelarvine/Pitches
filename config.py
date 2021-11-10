@@ -14,7 +14,8 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = 'asandelarvine@gmail.com'
     MAIL_PASSWORD = 'chaviva2000'
-    SUBJECT_PREFIX = 'One Minute Pitch'
+
+    SUBJECT_PREFIX = 'Pitch-Zone'
     SENDER_EMAIL = 'asandelarvine@gmail.com'
 
     # simple mde  configurations
