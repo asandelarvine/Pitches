@@ -7,15 +7,15 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container" style="background-image: url(../static/images/bgd1.jpg); padding:20px; margin-top:0px; padding-top:40px; padding-bottom:400px;">
+    <div class="container" style="background-image: url(../static/images/bady-abbas-5CGuM2S1uSQ-unsplash.jpg);background-repeat: no-repeat; background-size: cover; padding:20px; margin-top:0px; padding-top:40px; padding-bottom:400px;">
         <div class="row" style="text-align:center; font-size:30px;">
-            <span style="font-size:40px; font-family: 'Joti One'">PiTcH-ZoNe</span>
+            <span style="font-size:40px; font-family: 'Joti One'; color:crimson; font-weight:bolder">PiTcH-ZoNe</span>
         </div>
 
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav" style="list-style-type: none;padding: 0; margin:0; float:left;">
               <li class="nav-item active">
-                <a href="{{url_for('main.interview')}}" style=" font-size:12px; ">
+                <a href="{{url_for('main.interview')}}" style=" font-size:18px; color:aqua; font-weight:bolder; ">
                         
                     Interview Pitches
                 </a>
@@ -23,21 +23,21 @@
               <br>
               
               <li class="nav-item">
-                <a href="{{url_for('main.pick_up_line')}}" style="font-size:12px;">
+                <a href="{{url_for('main.pick_up_line')}}" style="font-size:18px; color: white; font-weight:bolder">
                        
                     Pick Up Lines
                 </a>
               </li>
               <br>
               <li class="nav-item">
-                <a href="{{url_for('main.promotion')}}" style="font-size:12px;">
+                <a href="{{url_for('main.promotion')}}" style="font-size:18px; color:aqua; font-weight:bolder;">
                         
                     Promotion Pitches
                 </a>
               </li>
               <br>
               <li class="nav-item">
-                <a href="{{url_for('main.product')}}" style="font-size:12px;">
+                <a href="{{url_for('main.product')}}" style="font-size:18px; color:white; font-weight:bolder">
                         
                     Product Pitches
                 </a>
@@ -64,14 +64,21 @@
             
         </div>
     </hr>
-        <div class="all-pitches">
-            <span style="color:gainsboro;">All pitches are displayed below</span>
+        <div class="all-pitches" style="text-align:center">
+            <span style="color:cyan; ">All pitches are displayed below</span>
                 <hr> 
                 {{macro.displayPitches(pitches)}}
             
 
         </div>
 
+    </div>
+
+    
+    <div class="footer">
+      <p style="text-align: center; color: cyan; font-size:15px" > Copyright &copy;
+        <script>document.write(new Date().getFullYear())</script> Pitches-Zone All Rights Reserved 
+     </p>
     </div>
 
 
