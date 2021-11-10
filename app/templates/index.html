@@ -7,34 +7,37 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container" style="background-color:gainsboro; padding:20px; margin-top:0px; padding-top:40px; padding-bottom:400px;">
+    <div class="container" style="background-image: url(../static/images/bgd1.jpg); padding:20px; margin-top:0px; padding-top:40px; padding-bottom:400px;">
         <div class="row" style="text-align:center; font-size:30px;">
-            <span style="font-size:40px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PiTcH-ZoNe</span>
+            <span style="font-size:40px; font-family: 'Joti One'">PiTcH-ZoNe</span>
         </div>
 
-          <div class="collapse navbar-collapse" id="navbarNav" style="padding: 5rem;">
-            <ul class="navbar-nav">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" style="list-style-type: none;padding: 0; margin:0; float:left;">
               <li class="nav-item active">
-                <a href="{{url_for('main.interview')}}" style="font-family: 'Joti One', cursive; font-size:12px;">
+                <a href="{{url_for('main.interview')}}" style=" font-size:12px; ">
                         
-                    Inteview Pitches
+                    Interview Pitches
                 </a>
-               
               </li>
+              <br>
+              
               <li class="nav-item">
-                <a href="{{url_for('main.pick_up_line')}}" style="font-family: 'Joti One', cursive; font-size:12px;">
+                <a href="{{url_for('main.pick_up_line')}}" style="font-size:12px;">
                        
                     Pick Up Lines
                 </a>
               </li>
+              <br>
               <li class="nav-item">
-                <a href="{{url_for('main.promotion')}}" style="font-family: 'Joti One', cursive; font-size:12px;">
+                <a href="{{url_for('main.promotion')}}" style="font-size:12px;">
                         
                     Promotion Pitches
                 </a>
               </li>
+              <br>
               <li class="nav-item">
-                <a href="{{url_for('main.product')}}" style="font-family: 'Joti One', cursive; font-size:12px;">
+                <a href="{{url_for('main.product')}}" style="font-size:12px;">
                         
                     Product Pitches
                 </a>
@@ -43,10 +46,11 @@
           </div>
           <br>
           <br>
+        
             
-        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+        <div>
             <div class="panel style="style="border: 3px solid #f2f2f2; padding:20px; margin-top:10px;">
-                <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size:20px;">Welcome to Pitches-Zone. Feel free to create new pitches,comment and vote.</p>
+                <p style="font-family: 'Joti One'; font-size:20px; text-align:center;">Welcome to Pitches-Zone. Feel free to create new pitches,comment and vote.</p>
                 
                 <div style="text-align:center;">
                     <a href="{{url_for('main.new_pitch')}}">
