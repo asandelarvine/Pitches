@@ -23,9 +23,9 @@
               <br>
               
               <li class="nav-item">
-                <a href="{{url_for('main.pick_up_line')}}" style="font-size:18px; color: white; font-weight:bolder">
+                <a href="{{url_for('main.elevator')}}" style="font-size:18px; color: white; font-weight:bolder">
                        
-                    Pick Up Lines
+                    Elevator Pitches
                 </a>
               </li>
               <br>
@@ -64,7 +64,9 @@
         <br>
     </hr>
         <div class="all-pitches" style="text-align:center">
-            <span style="color:crimson; ">All pitches are displayed below</span>
+            <span style="color:#000000; font-family: 'Joti One';">
+              <h1> All pitches are displayed below:</h1>
+            </span>
                 <hr> 
                 {{macro.displayPitches(pitches)}}
             
