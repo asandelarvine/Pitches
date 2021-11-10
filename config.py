@@ -5,7 +5,7 @@ class Config:
     General configuration parent class
     '''
     SECRET_KEY = 'TheDifference'
-    SQLALCHEMY_DATABASE_URI = 'postgres://zniawonteukrvv:8397fa400f727b9abf77a2fa7fea8dcb90e4ba9da4db74b358a829ed8ad957db@ec2-54-147-207-184.compute-1.amazonaws.com:5432/desdivf220kn0v'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:monkey@localhost/pitches1'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     
     #  email configurations
@@ -23,7 +23,7 @@ class Config:
     SIMPLEMDE_USE_CDN = True
 
 class TestConfig(Config):
-     SQLALCHEMY_DATABASE_URI = 'postgres://zniawonteukrvv:8397fa400f727b9abf77a2fa7fea8dcb90e4ba9da4db74b358a829ed8ad957db@ec2-54-147-207-184.compute-1.amazonaws.com:5432/desdivf220kn0v'
+     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:monkey@localhost/pitches_test1'
 
 class ProdConfig(Config):
     '''
@@ -31,7 +31,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgres://zniawonteukrvv:8397fa400f727b9abf77a2fa7fea8dcb90e4ba9da4db74b358a829ed8ad957db@ec2-54-147-207-184.compute-1.amazonaws.com:5432/desdivf220kn0v'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:monkey@localhost/pitches1'
     
 class DevConfig(Config):
     '''
