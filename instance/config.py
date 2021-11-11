@@ -1,1 +1,1 @@
-SECRET_KEY = 'TheDifference'
+SECRET_KEY = 'rmiG4WsTylvGzJniAeAyRg'

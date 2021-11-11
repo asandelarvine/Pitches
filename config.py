@@ -4,7 +4,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    SECRET_KEY = 'TheDifference'
+    SECRET_KEY = 'rmiG4WsTylvGzJniAeAyRg'
     # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:monkey@localhost/pitches1'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     
