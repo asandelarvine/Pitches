@@ -5,15 +5,15 @@ class Config:
     General configuration parent class
     '''
     SECRET_KEY = 'TheDifference'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:monkey@localhost/pitches1'
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:monkey@localhost/pitches1'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587 
     MAIL_USE_TLS = True
-    MAIL_USERNAME = 'asandelarvine@gmail.com'
-    MAIL_PASSWORD = 'chaviva2000'
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
 
     SUBJECT_PREFIX = 'Pitch-Zone'
     SENDER_EMAIL = 'asandelarvine@gmail.com'
@@ -31,7 +31,9 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:monkey@localhost/pitches1'
+    SQLALCHEMY_DATABASE_URI = os.environment.get('DATABASE_URL')
+    if SQLALCHEMY_DATABASE_URI and SQLALCHEMY_DATABASE_URI.startswith('postgres://'):
+        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace('postgres://', 'postgresql://', 1)
     
 class DevConfig(Config):
     '''
