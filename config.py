@@ -22,18 +22,19 @@ class Config:
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
 
-class TestConfig(Config):
-     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:monkey@localhost/pitches_test1'
-
 class ProdConfig(Config):
     '''
     Production  configuration child class
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = os.environment.get('DATABASE_URL')
-    if SQLALCHEMY_DATABASE_URI and SQLALCHEMY_DATABASE_URI.startswith('postgres://'):
-        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace('postgres://', 'postgresql://', 1)
+    SQLALCHEMY_DATABASE_URI = os.environment.get("DATABASE_URL")
+    if SQLALCHEMY_DATABASE_URI and SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://", 1)
+
+class TestConfig(Config):
+     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:monkey@localhost/pitches_test1'
+
     
 class DevConfig(Config):
     '''
@@ -41,7 +42,8 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:monkey@localhost/pitches'
+
 
     DEBUG = True
 
